@@ -1,8 +1,10 @@
 package cse360assign2;
 
-public class AddingMachine {
+public class AddingMachine 
+{
 
-	private int total;
+    private int total;
+    private String transactions = "0 ";
 	
     public AddingMachine ()
     {
@@ -26,7 +28,8 @@ public class AddingMachine {
      */
     public void add (int value) 
     {
-		this.total = getTotal() + value;
+        total = total + value;
+        transactions = transactions + "+ " + value + " ";
 	}
     
     /**
@@ -36,22 +39,24 @@ public class AddingMachine {
      */
     public void subtract (int value)
     {
-		this.total = getTotal() - value;
+        total = total - value;
+        transactions = transactions + "- " + value + " ";
 	}
     
     /**
-     * toString function for this class
+     * toString function the prints the transactions in a singular formula
      */
     public String toString () 
     {
-		return "";
+		return transactions;
 	}
 
     /**
-     * 
+     * Resets the total to 0 and resets the transactions to 0 as well
      */
     public void clear() 
     {
-	
+        total = 0;
+        transactions = "0 ";
 	}
 }
