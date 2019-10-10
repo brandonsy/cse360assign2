@@ -18,4 +18,6 @@ public class Testing
         assertEquals(-1, tester.subtract(1), "Subtracting 1 from the init should equal -1");
         assertEquals(-2, tester.subtract(1), "Subtracting 1 from the init should equal -2");
     }
+
+
 }
